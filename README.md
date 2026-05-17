@@ -53,16 +53,14 @@ Email-Spam-Detection/
 
 ---
 
-## ⚙️ Workflow
-
-### 1️⃣ Data Loading
-```python
+⚙️ Workflow
+1️⃣ Data Loading
 import pandas as pd
 
 df = pd.read_csv("emails.csv")
 2️⃣ Data Preprocessing
 
-Includes:
+This step includes:
 
 Handling missing values
 Label encoding (spam = 1, ham = 0)
@@ -80,8 +78,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(df['text'])
 4️⃣ Feature Selection
-Chi-Square Test for categorical relationships
-Mutual Information for feature importance
+Chi-Square Test → for relationship between categorical variables
+Mutual Information → for feature importance
 5️⃣ Model Training
 
 Models used:
@@ -92,13 +90,16 @@ Decision Tree
 Support Vector Machine (SVM)
 Random Forest
 K-Nearest Neighbors (KNN)
+
+Example (SVM model):
+
 from sklearn.svm import SVC
 
 model = SVC(kernel='linear')
 model.fit(X_train, y_train)
 6️⃣ Model Evaluation
 
-Metrics used:
+Evaluation metrics:
 
 Accuracy
 Precision
@@ -108,12 +109,12 @@ F1-score
 🏆 Best Model Accuracy: 98%
 
 📊 Data Visualization
-📈 Count Plot (Spam vs Ham distribution)
-🥧 Pie Chart (class distribution)
-📊 Bar Plot (email statistics)
-☁️ WordCloud (frequent spam words)
-📉 KDE Plot (email length distribution)
-🔥 Correlation Heatmap
+📈 Count Plot → Spam vs Ham distribution
+🥧 Pie Chart → Class distribution
+📊 Bar Plot → Email statistics
+☁️ WordCloud → Frequent spam words
+📉 KDE Plot → Email length distribution
+🔥 Correlation Heatmap → Feature relationships
 🤖 Machine Learning Models Comparison
 Model	Description
 Naive Bayes	Best for text classification
@@ -148,13 +149,4 @@ python src/train.py
 python src/predict.py
 ⭐ Acknowledgements
 
-Thanks to all contributors and instructors supporting this project.
-
-
----
-
-If you want, I can also:
-- 🚀 :contentReference[oaicite:6]{index=6}
-- 📊 :contentReference[oaicite:7]{index=7}
-- 🔥 :contentReference[oaicite:8]{index=8}
-- 📁 :contentReference[oaicite:9]{index=9}
+Thanks to all contributors and instructors supporting this project.ntReference[oaicite:9]{index=9}
